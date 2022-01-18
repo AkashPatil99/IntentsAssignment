@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Intents Assignment</string>
+
+    <string name="explicit_intent_header_text">Explicit Intent</string>
+    <string name="name_hint">Name</string>
+    <string name="explicit_intent_button_text">Fire</string>
+    <string name="name_not_entered_error_message">Name is not entered</string>
+
+    <string name="name_activity_text">Hello, %1$s!</string>
+
+    <string name="email_intent_header_text">Implicit Intent (Email)</string>
+    <string name="minus">—</string>
+    <string name="plus">+</string>
+    <string name="send_email_button_text">Place Order</string>
+
+    <string name="email_subject">Coffee order for %1$s</string>
+
+    <plurals name="email_body">
+        <item quantity="one">Hi,\n\nI\'d like to place an order for %d coffee.\n\nThanks,\n%s</item>
+        <item quantity="other">Hi,\n\nI\'d like to place an order for %d coffees.\n\nThanks,\n%s</item>
+    </plurals>
+
+    <string name="camera_intent_header_text">Implicit Intent (Camera)</string>
+    <string name="take_photo_button_text">Take Photo</string>
+    <string name="camera_thumbnail">Thumbnail</string>
+</resources>

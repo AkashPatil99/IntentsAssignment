@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+    <TextView
+        android:id="@+id/explicit_intent_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/explicit_intent_header_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_hint"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toStartOf="@id/explicit_intent_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/explicit_intent_header" />
+
+    <Button
+        android:id="@+id/explicit_intent_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/explicit_intent_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/explicit_intent_header" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#CCC"
+        app:layout_constraintTop_toBottomOf="@id/name_edit_text" />
+
+    <TextView
+        android:id="@+id/email_intent_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/email_intent_header_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    <EditText
+        android:id="@+id/coffee_name_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_hint"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_intent_header" />
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:text="@string/minus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coffee_name_edit_text" />
+
+    <TextView
+        android:id="@+id/num_coffees_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/minus_button"
+        app:layout_constraintStart_toEndOf="@id/minus_button"
+        app:layout_constraintTop_toTopOf="@id/minus_button"
+        tools:text="3" />
+
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:text="@string/plus"
+        app:layout_constraintStart_toEndOf="@id/num_coffees_text"
+        app:layout_constraintTop_toBottomOf="@id/coffee_name_edit_text" />
+
+    <Button
+        android:id="@+id/send_email_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_email_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coffee_name_edit_text" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#CCC"
+        app:layout_constraintTop_toBottomOf="@id/send_email_button" />
+
+    <TextView
+        android:id="@+id/camera_intent_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/camera_intent_header_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    <ImageView
+        android:id="@+id/camera_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_margin="8dp"
+        android:background="#CCC"
+        android:contentDescription="@string/camera_thumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/camera_intent_header" />
+
+    <Button
+        android:id="@+id/take_photo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/take_photo_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/camera_image" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#CCC"
+        app:layout_constraintTop_toBottomOf="@id/take_photo_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
